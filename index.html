@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-Hant" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 寫程式神器｜現代行銷 Landing Page</title>
+    <meta
+      name="description"
+      content="AI 寫程式神器 - 快、準、易的開發體驗，立即試用。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Noto Sans TC", "system-ui", "sans-serif"],
+            },
+            colors: {
+              brand: {
+                50: "#ecf2ff",
+                500: "#6366f1",
+                600: "#4f46e5",
+                700: "#4338ca",
+              },
+            },
+            boxShadow: {
+              glow: "0 20px 45px rgba(99, 102, 241, 0.35)",
+            },
+            backgroundImage: {
+              hero: "radial-gradient(circle at top, rgba(99,102,241,0.45), transparent 60%), linear-gradient(120deg, rgba(15,23,42,0.6), rgba(30,41,59,0.9))",
+            },
+          },
+        },
+      };
+    </script>
+    <script>
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+    <div id="root"></div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
